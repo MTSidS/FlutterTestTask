@@ -20,4 +20,6 @@ Code Review Pointers:
    so, we can do : List<int> list = List.filled(100, 0);
 6. setState() is used in ListItemWidget, which can make unnecessary rebuilds, so we need a proper state management solution such as BLoC.
 7. Container is used in ListItemWidget, but none of the properties are used except for padding, which makes Container redundant as we can achieve the same just using Padding widget.
-8. Name of the List<Widget> is list, which should be changed to something meaningful like counts
+8. Name of the List<Widget> is list, which should be changed to something meaningful like counts.
+9. ListWidget and ListItemWidget should be taken into a separate files.
+10. ListWidget and ListItemWidget should be renamed to CounterWidget and CounterItemWidget respectively for meaningful names.
