@@ -1,5 +1,7 @@
-Code Review Pointers:
+**The main issue was :** We have a Stateful Widget (ListItem) whose state reloads everytime we scroll.
+**How we resolved it? :** We used BLoC pattern as a state management solution and we used List<int> instead of int to manage our state, so the widget won't reload unnecessarily, it will reload only when state changes occur.
 
+**Code Review Pointers:**
 1. As ListItemWidget is a stateful widget any same value given to number of this widget will have state duplication, so we should put key to this widget like below:
    ListItemWidget(key: ValueKey(index))
 2. for (var i = 0; i <= 100; i++) {
