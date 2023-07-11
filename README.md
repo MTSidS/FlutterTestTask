@@ -1,4 +1,5 @@
 **The main issue was :** We have a Stateful Widget (ListItem) whose state reloads everytime we scroll.
+
 **How we resolved it? :** We used BLoC pattern as a state management solution and we used List<int> instead of int to manage our state, so the widget won't reload unnecessarily, it will reload only when state changes occur.
 
 **Code Review Pointers:**
